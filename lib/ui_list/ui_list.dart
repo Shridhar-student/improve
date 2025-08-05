@@ -5,6 +5,7 @@ import 'package:improve/widgets/flexible.dart';
 import 'package:improve/widgets/hero.dart';
 import 'package:improve/widgets/interactiveViewer.dart';
 import 'package:improve/widgets/l_ProgressInd.dart';
+import 'package:improve/widgets/wrap.dart';
 
 class UiListScreen extends StatelessWidget {
   UiListScreen({super.key});
@@ -14,7 +15,8 @@ class UiListScreen extends StatelessWidget {
     'Hero',
     'InteractiveViewer',
     'Flexible',
-    'Expanded'
+    'Expanded',
+    'Wrap'
   ];
 
   @override
@@ -56,6 +58,11 @@ class UiListScreen extends StatelessWidget {
                 if (screen == 'Expanded') {
                   Navigator.push(context, MaterialPageRoute(builder: (ctx) {
                     return const ExpandedScreen();
+                  }));
+                }
+                if (screen == 'Wrap') {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const WrapScreen();
                   }));
                 }
               },
