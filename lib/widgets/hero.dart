@@ -7,22 +7,23 @@ class HeroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(),
         body: Align(
-      alignment: Alignment.bottomCenter,
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (ctx) => const HeroNavScreen()));
-        },
-        child: const Hero(
-          tag: 'hero',
-          child: Icon(
-            Icons.image,
-            color: Colors.blue,
-            size: 60,
+          alignment: Alignment.bottomCenter,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => const HeroNavScreen()));
+            },
+            child: const Hero(
+              tag: 'hero',
+              child: Icon(
+                Icons.image,
+                color: Colors.blue,
+                size: 60,
+              ),
+            ),
           ),
-        ),
-      ),
-    ));
+        ));
   }
 }

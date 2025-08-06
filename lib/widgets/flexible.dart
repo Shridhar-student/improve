@@ -8,6 +8,7 @@ class FlexibleScreen extends StatelessWidget {
     //flex is calculated based on given flex-ex 2,4,6, total 2+4+6=12, per container-> 12/2, 12/4, 12/6,
 
     return Scaffold(
+      appBar: AppBar(),
       body: Column(
         children: [
           Flexible(

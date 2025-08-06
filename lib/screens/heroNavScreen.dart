@@ -11,17 +11,18 @@ class _HeroNavScreenState extends State<HeroNavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(),
         body: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Hero(
-          tag: 'hero',
-          child: InteractiveViewer(
-            child: Image.network(
-                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-          ),
-        ),
-      ],
-    ));
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Hero(
+              tag: 'hero',
+              child: InteractiveViewer(
+                child: Image.network(
+                    'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+              ),
+            ),
+          ],
+        ));
   }
 }

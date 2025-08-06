@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:improve/widgets/badge.dart';
+import 'package:improve/widgets/bottomSheet.dart';
+import 'package:improve/widgets/clifOvel.dart';
 import 'package:improve/widgets/expanded.dart';
 import 'package:improve/widgets/flexible.dart';
 import 'package:improve/widgets/hero.dart';
 import 'package:improve/widgets/interactiveViewer.dart';
 import 'package:improve/widgets/l_ProgressInd.dart';
+import 'package:improve/widgets/materialBanner.dart';
 import 'package:improve/widgets/wrap.dart';
 
 class UiListScreen extends StatelessWidget {
@@ -16,7 +19,10 @@ class UiListScreen extends StatelessWidget {
     'InteractiveViewer',
     'Flexible',
     'Expanded',
-    'Wrap'
+    'Wrap',
+    'ClifOvel',
+    'Materialbanner',
+    'BottomSheet'
   ];
 
   @override
@@ -63,6 +69,21 @@ class UiListScreen extends StatelessWidget {
                 if (screen == 'Wrap') {
                   Navigator.push(context, MaterialPageRoute(builder: (ctx) {
                     return const WrapScreen();
+                  }));
+                }
+                if (screen == 'ClifOvel') {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const ClifOvelScreen();
+                  }));
+                }
+                if (screen == 'Materialbanner') {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const MaterialbannerScreen();
+                  }));
+                }
+                if (screen == 'BottomSheet') {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const BottomSheetScreen();
                   }));
                 }
               },
