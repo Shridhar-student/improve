@@ -5,10 +5,13 @@ class WrapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(top: 100, left: 20, right: 20),
+    return Scaffold(
+      appBar: AppBar(),
+      body: const Padding(
+        padding: EdgeInsets.only(top: 100, left: 10),
         child: Wrap(
+          spacing: 2,
+          runSpacing: 4,
           children: [
             Chip(label: Text('ONE')),
             SizedBox(

@@ -6,13 +6,14 @@ class BadgeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(),
         body: Center(
-      child: IconButton(
-          onPressed: () {},
-          icon: Badge.count(
-            count: 100,
-            child: const Icon(Icons.chat_outlined),
-          )),
-    ));
+          child: IconButton(
+              onPressed: () {},
+              icon: Badge.count(
+                count: 100,
+                child: const Icon(Icons.chat_outlined),
+              )),
+        ));
   }
 }
