@@ -8,11 +8,14 @@ import 'package:improve/widgets/hero.dart';
 import 'package:improve/widgets/interactiveViewer.dart';
 import 'package:improve/widgets/l_ProgressInd.dart';
 import 'package:improve/widgets/materialBanner.dart';
+import 'package:improve/widgets/popOver.dart';
+import 'package:improve/widgets/selectableText.dart';
 import 'package:improve/widgets/wrap.dart';
 
 class UiListScreen extends StatelessWidget {
   UiListScreen({super.key});
   final screens = [
+    'Popover',
     'Badge',
     'LProgressIndicator',
     'Hero',
@@ -22,7 +25,8 @@ class UiListScreen extends StatelessWidget {
     'Wrap',
     'ClifOvel',
     'Materialbanner',
-    'BottomSheet'
+    'BottomSheet',
+    'SelectableText'
   ];
 
   @override
@@ -36,9 +40,20 @@ class UiListScreen extends StatelessWidget {
             final screen = screens[index];
             return InkWell(
               onTap: () {
+                if (screen == 'Popover') {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const PopoverExample();
+                  }));
+                }
+
+                if (screen == 'SelectableText') {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const SelectableTextWidget();
+                  }));
+                }
                 if (screen == 'Badge') {
                   Navigator.push(context, MaterialPageRoute(builder: (ctx) {
-                    return BadgeScreen();
+                    return const BadgeScreen();
                   }));
                 }
                 if (screen == 'LProgressIndicator') {
@@ -48,7 +63,7 @@ class UiListScreen extends StatelessWidget {
                 }
                 if (screen == 'Hero') {
                   Navigator.push(context, MaterialPageRoute(builder: (ctx) {
-                    return HeroScreen();
+                    return const HeroScreen();
                   }));
                 }
                 if (screen == 'InteractiveViewer') {
